@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Resultados (RAR) - Agosto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .theme-primary {
+            background-color: #1e293b;
+        }
+        .text-brand {
+            color: #0284c7;
+        }
+        .bg-brand {
+            background-color: #0284c7;
+        }
+        .border-brand {
+            border-color: #0284c7;
+        }
+        .tab-active {
+            border-bottom: 3px solid #0284c7;
+            color: #0284c7;
+            background-color: rgba(2, 132, 199, 0.06);
+            font-weight: 700;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        .data-table th {
+            background-color: #f1f5f9;
+            text-align: left;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+        .data-table tr:hover {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- Cabeçalho de Navegação -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="bg-slate-900 text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg shadow-sm">
+                        <i class="fa-solid fa-scale-balanced text-sky-400"></i>
+                    </div>
+                    <div>
+                        <span class="font-poppins font-bold text-lg text-slate-900 block leading-tight">Relatório Jurídico</span>
+                        <span class="text-xs text-slate-500 font-medium">Resultados & Indicadores (RAR)</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-1 h-full items-center text-xs font-semibold uppercase tracking-wider text-slate-600">
+                    <button onclick="showSection('visao-geral')" class="nav-btn tab-active px-4 py-7 transition-all duration-200 hover:text-sky-600" id="btn-visao-geral">Visão Geral</button>
+                    <button onclick="showSection('base-regioes')" class="nav-btn px-4 py-7 transition-all duration-200 hover:text-sky-600" id="btn-base-regioes">Base Ativa & Regiões</button>
+                    <button onclick="showSection('produtividade')" class="nav-btn px-4 py-7 transition-all duration-200 hover:text-sky-600" id="btn-produtividade">Produtividade & Prazos</button>
+                    <button onclick="showSection('equipe')" class="nav-btn px-4 py-7 transition-all duration-200 hover:text-sky-600" id="btn-equipe">Equipe & Operacional</button>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full font-semibold border border-slate-200">
+                        <i class="fa-regular fa-calendar-days mr-1 text-sky-600"></i> Mês: Agosto
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SECÇÃO: VISÃO GERAL -->
+        <section id="visao-geral" class="content-section active">
+            <!-- Banner de Abertura -->
+            <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-10 border-b border-slate-700">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="inline-block bg-sky-500/20 text-sky-300 text-xs font-semibold px-3 py-1 rounded-md mb-2 uppercase tracking-wide">
+                        Dados para o RAR
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight">Relatório de Resultados - Agosto</h2>
+                    <p class="text-slate-300 mt-1 text-sm">Consolidação de Decisões, Base Ativa, Audiências e Indicadores da Operação</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                <!-- Cards Principais / Decisões -->
+                <div>
+                    <h3 class="font-poppins font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-gavel text-sky-600"></i> Nº de Processos Decisões
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-slate-800">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Geral</p>
+                            <p class="text-4xl font-bold text-slate-900 mt-2">56</p>
+                            <span class="inline-block mt-3 text-xs text-slate-500 font-medium bg-slate-100 px-2.5 py-1 rounded-full">Decisões proferidas</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-emerald-500">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Favorável</p>
+                            <p class="text-4xl font-bold text-emerald-600 mt-2">56</p>
+                            <span class="inline-block mt-3 text-xs text-emerald-700 font-semibold bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                                Extinção (100% de êxito)
+                            </span>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-rose-400">
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Desfavorável</p>
+                            <p class="text-4xl font-bold text-rose-500 mt-2">0</p>
+                            <span class="inline-block mt-3 text-xs text-slate-500 font-medium bg-slate-100 px-2.5 py-1 rounded-full">Nenhum resultado desfavorável</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel de Destaques: Audiências, Bloqueios e Aging -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Audiências Realizadas -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-users text-sky-600"></i> Audiências Realizadas
+                                </h4>
+                                <span class="text-xs font-bold text-slate-400 uppercase">Total: 36</span>
+                            </div>
+                            <div class="space-y-3 mt-2">
+                                <div class="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <span class="text-sm text-slate-600">Audiência por correspondente</span>
+                                    <span class="font-bold text-slate-800 text-lg">36</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <span class="text-sm text-slate-600">Audiência interna</span>
+                                    <span class="font-bold text-slate-800 text-lg">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                            Quantidade total: <strong class="text-slate-800">36</strong> audiências
+                        </div>
+                    </div>
+
+                    <!-- Bloqueios -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-emerald-600"></i> Bloqueios
+                                </h4>
+                                <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Status</span>
+                            </div>
+                            <div class="text-center py-4">
+                                <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl font-bold border border-emerald-200">
+                                    0
+                                </div>
+                                <p class="text-2xl font-bold text-slate-800">0 Bloqueios</p>
+                                <p class="text-xs text-slate-500 mt-1">Ausência de bloqueios registrados</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-center text-emerald-700 font-semibold">
+                            Registro em conformidade integral
+                        </div>
+                    </div>
+
+                    <!-- Aging -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                                    <i class="fa-regular fa-calendar-check text-indigo-600"></i> Aging
+                                </h4>
+                                <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-bold">Carteira</span>
+                            </div>
+                            <div class="text-center py-4">
+                                <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl border border-indigo-200">
+                                    <i class="fa-solid fa-hourglass-start"></i>
+                                </div>
+                                <p class="text-base font-bold text-slate-800">&lt; 1 Ano</p>
+                                <p class="text-xs text-slate-600 mt-2 px-4">
+                                    Toda a carteira tem menos que 1 ano
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-center text-slate-500">
+                            Controle de maturação da carteira
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo Operacional Adicional -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl border border-amber-200">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base">Despacho</h4>
+                                <p class="text-xs text-slate-500">Total: 03 despachos de segredo de justiça</p>
+                            </div>
+                        </div>
+                        <span class="text-2xl font-bold text-amber-700 bg-amber-50 px-4 py-2 rounded-xl border border-amber-200">03</span>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center text-xl border border-sky-200">
+                                <i class="fa-regular fa-file-lines"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-base">Nº de Relatórios do Cliente</h4>
+                                <p class="text-xs text-slate-500">Relatório de defesas diários</p>
+                            </div>
+                        </div>
+                        <span class="text-2xl font-bold text-sky-700 bg-sky-50 px-4 py-2 rounded-xl border border-sky-200">01</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO: BASE ATIVA & REGIÕES -->
+        <section id="base-regioes" class="content-section">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-10 border-b border-slate-700">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold tracking-tight">Base Ativa</h2>
+                    <p class="text-slate-300 mt-1 text-sm">Distribuição Geográfica de Processos Ativos por Região</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                <!-- Total Geral da Base -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Volume Geral de Processos</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Base Ativa Total</h3>
+                        <p class="text-sm text-slate-500 mt-1">Distribuição consolidada entre as 5 regiões do país</p>
+                    </div>
+                    <div class="flex items-baseline gap-2 bg-slate-50 px-6 py-4 rounded-2xl border border-slate-200 self-start md:self-auto">
+                        <span class="text-4xl font-extrabold text-sky-600">1.512</span>
+                        <span class="text-xs font-bold text-slate-500 uppercase">Processos Ativos</span>
+                    </div>
+                </div>
+
+                <!-- Cards por Região -->
+                <div>
+                    <h4 class="font-poppins font-bold text-slate-800 text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot text-sky-600"></i> Quantidade por Região
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                        <!-- Sudeste -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-sky-500">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Região</span>
+                            <h5 class="text-lg font-bold text-slate-800 mt-1">Sudeste</h5>
+                            <p class="text-3xl font-bold text-slate-900 mt-2">402</p>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
+                                <div class="bg-sky-500 h-1.5 rounded-full" style="width: 26.6%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Sul -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-blue-500">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Região</span>
+                            <h5 class="text-lg font-bold text-slate-800 mt-1">Sul</h5>
+                            <p class="text-3xl font-bold text-slate-900 mt-2">380</p>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
+                                <div class="bg-blue-500 h-1.5 rounded-full" style="width: 25.1%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Nordeste -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-amber-500">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Região</span>
+                            <h5 class="text-lg font-bold text-slate-800 mt-1">Nordeste</h5>
+                            <p class="text-3xl font-bold text-slate-900 mt-2">323</p>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
+                                <div class="bg-amber-500 h-1.5 rounded-full" style="width: 21.4%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Norte -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Região</span>
+                            <h5 class="text-lg font-bold text-slate-800 mt-1">Norte</h5>
+                            <p class="text-3xl font-bold text-slate-900 mt-2">232</p>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
+                                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 15.3%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Centro Oeste -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 border-t-4 border-t-purple-500">
+                            <span class="text-xs font-bold text-slate-400 uppercase">Região</span>
+                            <h5 class="text-lg font-bold text-slate-800 mt-1">Centro Oeste</h5>
+                            <p class="text-3xl font-bold text-slate-900 mt-2">175</p>
+                            <div class="w-full bg-slate-100 rounded-full h-1.5 mt-3">
+                                <div class="bg-purple-500 h-1.5 rounded-full" style="width: 11.6%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela de Consolidação Regional -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+                        <h4 class="font-bold text-slate-800">Detalhamento Numérico - Base Ativa</h4>
+                        <span class="text-xs font-semibold text-slate-500">Documento Oficial</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Região</th>
+                                    <th>Processos Ativos</th>
+                                    <th>Proporção Relativa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold text-slate-800"><i class="fa-solid fa-location-dot mr-2 text-sky-500"></i>Sudeste</td>
+                                    <td class="font-bold text-slate-900">402</td>
+                                    <td>26,59%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-slate-800"><i class="fa-solid fa-location-dot mr-2 text-blue-500"></i>Sul</td>
+                                    <td class="font-bold text-slate-900">380</td>
+                                    <td>25,13%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-slate-800"><i class="fa-solid fa-location-dot mr-2 text-amber-500"></i>Nordeste</td>
+                                    <td class="font-bold text-slate-900">323</td>
+                                    <td>21,36%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-slate-800"><i class="fa-solid fa-location-dot mr-2 text-emerald-500"></i>Norte</td>
+                                    <td class="font-bold text-slate-900">232</td>
+                                    <td>15,34%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold text-slate-800"><i class="fa-solid fa-location-dot mr-2 text-purple-500"></i>Centro Oeste</td>
+                                    <td class="font-bold text-slate-900">175</td>
+                                    <td>11,57%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-slate-50 font-bold">
+                                    <td class="text-slate-900">Base ativa total</td>
+                                    <td class="text-sky-600 text-base">1512</td>
+                                    <td>100,00%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO: PRODUTIVIDADE & PRAZOS -->
+        <section id="produtividade" class="content-section">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-10 border-b border-slate-700">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold tracking-tight">Produtividade da Equipe Geral</h2>
+                    <p class="text-slate-300 mt-1 text-sm">Registro de Compromissos e Cumprimento de Prazos</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+                        <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-sky-600"></i> Tabela de Produtividade
+                        </h3>
+                        <span class="text-xs bg-sky-50 text-sky-700 border border-sky-200 font-semibold px-2.5 py-1 rounded-full">
+                            Dados da Equipe Geral
+                        </span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="w-1/3">ADV</th>
+                                    <th class="w-1/3">COMPROMISSO</th>
+                                    <th class="w-1/3">PRAZO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-bold text-slate-900 flex items-center gap-2">
+                                        <div class="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-700">
+                                            EA
+                                        </div>
+                                        EASI
+                                    </td>
+                                    <td class="text-slate-400 italic">—</td>
+                                    <td class="font-bold text-sky-600 text-base">87</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Detalhes complementares de despachos e relatórios -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Despacho -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Despacho</h4>
+                                <p class="text-xs text-slate-400">Total registrado no período</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 mt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-slate-700 font-medium">Despachos de segredo de justiça</span>
+                                <span class="text-lg font-bold text-slate-900">03</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-3">
+                            Total: <strong>03 despachos de segredo de justiça</strong>
+                        </p>
+                    </div>
+
+                    <!-- Relatórios do Cliente -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Nº de Relatórios do Cliente</h4>
+                                <p class="text-xs text-slate-400">Entregas periódicas</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 mt-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-slate-700 font-medium">Relatório de defesas diários</span>
+                                <span class="text-lg font-bold text-slate-900">01</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-3">
+                            Quantidade total de relatórios: <strong>01</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO: EQUIPE E OPERACIONAL -->
+        <section id="equipe" class="content-section">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-10 border-b border-slate-700">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold tracking-tight">Organograma da Equipe</h2>
+                    <p class="text-slate-300 mt-1 text-sm">Estrutura Funcional, Turnover e Desenvolvimento</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+                
+                <!-- Estrutura Hierárquica / Organograma -->
+                <div class="space-y-6">
+                    
+                    <!-- Liderança e Coordenação -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-sky-600 flex items-center gap-4">
+                            <div class="w-12 h-12 bg-sky-50 rounded-full flex items-center justify-center text-sky-600 text-xl font-bold">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider block">Coordenador</span>
+                                <h4 class="text-lg font-bold text-slate-800">Polliana</h4>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-600 flex items-center gap-4">
+                            <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 text-xl font-bold">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Liderança</span>
+                                <h4 class="text-lg font-bold text-slate-800">Igor Ribeiro</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advogados (Corpo Jurídico) -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                            <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-scale-balanced text-slate-600"></i> Corpo Jurídico (Advogados)
+                            </h4>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-semibold">8 Integrantes</span>
+                        </div>
+                        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Elizabeth Aguiar</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Rafaella Arruda</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Erica Lundgrenn</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Wendel Ramalho</p>
+                                    <p class="text-xs text-slate-500">Advogado</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Letícia Lima</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Emmanuela Boaventura</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Lucas Oliveira</p>
+                                    <p class="text-xs text-slate-500">Advogado</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                <i class="fa-regular fa-user text-slate-400"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-800">Betânia Oliveira</p>
+                                    <p class="text-xs text-slate-500">Advogada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Suporte Operacional (Assistente e Estagiária) -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Assistente</span>
+                                <h5 class="text-base font-bold text-slate-800">Marina Berenguer</h5>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Estagiária</span>
+                                <h5 class="text-base font-bold text-slate-800">Priscila Santos</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Gestão de Pessoas & Operação -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Turnover -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-sky-600"></i> Turnover
+                        </h4>
+                        <p class="text-xs text-slate-400 mb-4">(Separar o que foi decisão nossa e da pessoa)</p>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                            <div>
+                                <p class="text-sm font-bold text-emerald-900">Sem saídas</p>
+                                <p class="text-xs text-emerald-700">Retenção de 100% da equipe no período</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Treinamento e Desenvolvimento -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-chalkboard-user text-indigo-600"></i> Treinamento e Desenvolvimento
+                            </h4>
+                            <p class="text-xs text-slate-400 mb-4">Acompanhamento contínuo da equipe</p>
+                            <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <p class="text-xs text-slate-600">
+                                    Módulo ativo constante na pauta do RAR para registros de capacitação e reciclagem técnica.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-400 flex items-center gap-2">
+                            <i class="fa-regular fa-clock"></i> Pauta do RAR - Agosto
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-white border-t border-slate-200 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-xs">
+            <p>Relatório de Resultados Jurídicos (RAR) — Período: Agosto</p>
+            <p class="flex items-center gap-2">
+                <i class="fa-solid fa-circle text-[8px] text-emerald-500"></i> Base Consolidada Conforme Documento
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script de Alternância de Abas -->
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Exibe a seção selecionada
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Atualiza botões do menu
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+            });
+            const activeBtn = document.getElementById('btn-' + sectionId);
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active');
+            }
+
+            // Rola suavemente até o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
